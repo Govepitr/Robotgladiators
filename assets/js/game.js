@@ -70,9 +70,10 @@ var fight = function(enemyName) {
 }
 while(enemyHealth > 0) {
   for (var i = 0; i < enemyNames.length; i++) {
-    debugger;
-    //call fight function w/enemies
-    fight(enemyNames[i]);
+    var pickedEnemyName = enemyNames[i];
+    enemyHealth = 50;
+    //call fight function w/new enemies
+    fight(pickedEnemyName);
     }
   }
 // // You can also log multiple values at once like this
