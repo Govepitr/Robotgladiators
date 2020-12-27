@@ -21,7 +21,7 @@ console.log(enemyNames[1]);
 console.log(enemyNames[2]);
 console.log(enemyNames[3]);
 
-//create function(now with Enemy name's parameter flavors!)
+//create function(now with Enemy name's parameter flavors.)
 var fight = function(enemyName) {
     while (playerHealth > 0 && enemyHealth > 0) {
       for (var i = 0; i < enemyNames.length; i++) {
@@ -35,7 +35,7 @@ var fight = function(enemyName) {
 
         // if yes (true), leave fight
         if (confirmSkip) {
-          window.alert(playerName + ' has decided to skip this fight. Goodbye!');
+          window.alert(playerName + ' has decided to skip this fight. Goodbye.');
           // subtract money from playerMoney for skipping
           playerMoney = playerMoney - 10;
           
@@ -51,7 +51,7 @@ var fight = function(enemyName) {
       
       // check enemy's health
       if (enemyHealth <= 0) {
-        window.alert(enemyName + ' has died!');
+        window.alert(enemyName + ' has died.');
 
         // award player money for winning
         playerMoney = playerMoney + 20;
@@ -70,7 +70,7 @@ var fight = function(enemyName) {
 
       // check player's health
       if (playerHealth <= 0) {
-        window.alert(playerName + ' wipe yourself off, you dead!');
+        window.alert(playerName + ' has died.');
         // leave while() loop if player is dead
         break;
       } else {
@@ -88,7 +88,7 @@ var fight = function(enemyName) {
     playerAttack = 10;
     playerMoney = 10;
       if (playerHealth > 0) {
-        window.alert("Test your might!! Round " + (i + 1));
+        window.alert("Robot Gladiator. Round " + (i + 1));
       
         var pickedEnemyName = enemyNames[i];
       
@@ -97,14 +97,14 @@ var fight = function(enemyName) {
         fight(pickedEnemyName);
       }
       else {
-        window.alert("You have brought shame upon your family and upon your cow. Game Over!");
+        window.alert("You're dead. Game Over.");
         break;
       }
       // function to end the entire game
       var endGame = function() {
-        // if player is still alive, player wins!
+        // if player is still alive, player wins.
         if (playerHealth > 0) {
-          window.alert("Great job, you've survived the game! You now have a score of " + playerMoney + ".");
+          window.alert("Great job, you've survived the game. You now have a score of " + playerMoney + ".");
         } 
         else {
           window.alert("You've lost your robot in battle.");
@@ -118,7 +118,7 @@ var fight = function(enemyName) {
           startGame();
         } 
         else {
-          window.alert("Thank you for playing! Come back soon!");
+          window.alert("Thank you for playing. Come back soon.");
         }
       }
     }
