@@ -1,0 +1,1 @@
+window.alert("This is an alert, do you see it? Huh? Go ya!??!?!?");
