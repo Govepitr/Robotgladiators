@@ -131,31 +131,13 @@ var shop = function() {
 
   //Use switch case to carry out the actions and hold items
   switch (shopOptionPrompt) {
-    case "REFILL": // new case
+    case "REFILL":
     case "refill":
-      if (playerInfo.money >= 7) {
-        window.alert("Refilling player's health by 20 for 7 dollars.");
-  
-        playerInfo.health = playerInfo.health + 20;
-        playerInfo.money = playerInfo.money - 7;
-      }
-      else {
-        window.alert("You don't have enough money!");
-      }
-  
+      playerInfo.refillHealth();
       break;
-    case "UPGRADE": // new case
+    case "UPGRADE":
     case "upgrade":
-      if (playerInfo.money >= 7) {
-        window.alert("Upgrading player's attack by 6 for 7 dollars.");
-  
-        playerInfo.attack = playerInfo.attack + 6;
-        playerInfo.money = playerInfo.money - 7;
-      }
-      else {
-        window.alert("You don't have enough money!");
-      }
-  
+      playerInfo.upgradeAttack();
       break;
     case "LEAVE": // new case
     case "leave":
@@ -185,6 +167,25 @@ var playerInfo = {
     this.health = 100;
     this.money = 10;
     this.attack = 10;
+  }, // comma!
+  refillHealth: function() {
+    if (this.money >= 7) {
+      window.alert("Refilling player's health by 20 for 7 dollars.");
+      this.health += 20;
+      this.money -= 7;
+    }
+    else {
+      window.alert("You don't have enough money!");
+    }   
+  }, // comma!
+  upgradeAttack: function() {
+    if (this.money >= 7) {
+      window.alert("Upgrading player's attack by 6 for 7 dollars.");
+      this.attack += 6;
+      this.money -= 7;
+    } 
+    else {
+      window.alert("You don't have enough money!");
   }
 };
 
