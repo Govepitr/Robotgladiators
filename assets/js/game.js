@@ -195,7 +195,7 @@ var fightOrSkip = function () {
     
   //Validate prompt answer
   if (promptFight === "" || promptFight === null || !isNaN(promptFight)){
-    window.alert("Come ON dude, it's not thhat hard. I believe in you, try again!");
+    window.alert("Come ON dude, it's not that hard. I believe in you, try again!");
     //use return to call it again and stop the function from running again
     return fightOrSkip();
   }
